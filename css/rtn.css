@@ -14,4 +14,33 @@ body {
 
 p {
     color: rgb(255, 255, 255);
+    padding: 5em;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+a {
+  color: #fff;
+  border-bottom: 1px solid transparent;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.center {
+  line-height: 60px;
+  left: 0;
+  margin-top: -200px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.words {
+  font-family: "Courier New", Courier, Monaco;
+  color: #fff;
+  margin-top: 0;
+  display: block;
+  overflow: auto;
+  font-style: normal;
+  padding: 5em;
 }
