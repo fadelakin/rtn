@@ -30,7 +30,8 @@ window.onload = function() {
   });
 }
 
-$(document).ready(function fadeScroll(){
+$(document).ready(function(){
+  $('body').scrollTop(1);
   $('.name').scrollex({
     scroll: function(progress) {
 
