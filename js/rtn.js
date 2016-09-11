@@ -36,7 +36,15 @@ $(document).ready(function(){
     scroll: function(progress) {
 
       // Progressively increase a name's opacity as we scroll through it.
-      $(this).css('opacity', Math.max(0, Math.min(1, progress + 1)));
+      $(this).css('opacity', Math.max(0, Math.min(1, progress + 1.5)));
+
+    }
+  });
+  $('.bottom').scrollex({
+    scroll: function(progress) {
+
+      // Progressively increase a name's opacity as we scroll through it.
+      $(this).css('opacity', Math.max(0, Math.min(1, progress + 1.25)));
 
     }
   });
