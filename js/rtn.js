@@ -16,7 +16,7 @@ function readTextFile(file, callback)
     rawFile.send(null);
 }
 
-window.onload = function() {
+$(document).ready(function(){
   var fileDisplayArea = document.getElementById('names');
   readTextFile("http://remembertheir.name/names.txt", function(text){
 
@@ -28,15 +28,12 @@ window.onload = function() {
     var finalText = textArray.join('.</b>');
     fileDisplayArea.innerHTML = finalText;
   });
-}
-
-$(document).ready(function(){
   $('body').scrollTop(1);
   $('.name').scrollex({
     scroll: function(progress) {
 
       // Progressively increase a name's opacity as we scroll through it.
-      $(this).css('opacity', Math.max(0, Math.min(1, progress + 1.5)));
+      $(this).css('opacity', Math.max(0, Math.min(1, progress + 3)));
 
     }
   });
@@ -44,7 +41,7 @@ $(document).ready(function(){
     scroll: function(progress) {
 
       // Progressively increase a name's opacity as we scroll through it.
-      $(this).css('opacity', Math.max(0, Math.min(1, progress + 1.25)));
+      $(this).css('opacity', Math.max(0, Math.min(1, progress + 2.5)));
 
     }
   });
