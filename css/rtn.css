@@ -24,7 +24,6 @@ p {
 
 a {
   color: #fff;
-  text-decoration: none;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -35,5 +34,6 @@ a {
 .kemi {
     font-size: 10px;
     display: block;
+    text-decoration: none;
     text-align: center;
 }
