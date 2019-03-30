@@ -9,26 +9,30 @@ skel.breakpoints({
 
 function readTextFile(file, callback)
 {
-    var rawFile = new XMLHttpRequest();
+    let rawFile = new XMLHttpRequest();
+
     rawFile.open("GET", file, false);
     rawFile.onreadystatechange = function ()
     {
         if(rawFile.readyState === 4)
         {
-            if(rawFile.status === 200 || rawFile.status == 0)
+            if(rawFile.status === 200 || rawFile.status === 0)
             {
-                var allText = rawFile.responseText;
+                let allText = rawFile.responseText;
                 callback(allText);
             }
         }
-    }
+    };
+
     rawFile.send(null);
 }
 
 function addNames(){
-  var fileDisplayArea = document.getElementById('names');
+  let fileDisplayArea = document.getElementById('names');
+
   readTextFile("http://remembertheir.name/names.txt", function(text){
-    var textArray = text.split('.');
+    let textArray = text.split('.');
+
     textArray.forEach(function(txtItem, i){
       if(skel.breakpoint('large').active){
         textArray[i] = ('<b class="name" style="font-size: 45px;">'+txtItem);
@@ -36,8 +40,8 @@ function addNames(){
         textArray[i] = ('<b class="name">'+txtItem);
       }
     });
-    var finalText = textArray.join('.</b>');
-    fileDisplayArea.innerHTML = finalText;
+
+  fileDisplayArea.innerHTML = textArray.join('.</b>');
   });
 }
 
