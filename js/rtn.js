@@ -26,7 +26,7 @@ function readTextFile(file, callback) {
 function addNames() {
   let fileDisplayArea = document.getElementById("names");
 
-  readTextFile("http://remembertheir.name/names.txt", function(text) {
+  readTextFile("https://remembertheir.name/names.txt", function(text) {
     let textArray = text.split(".");
 
     textArray.forEach(function(txtItem, i) {
